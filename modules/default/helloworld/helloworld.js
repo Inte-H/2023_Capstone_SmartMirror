@@ -4,10 +4,12 @@
  * By Michael Teeuw https://michaelteeuw.nl
  * MIT Licensed.
  */
+
+let str = "Hello world Module";
 Module.register("helloworld", {
 	// Default module config.
 	defaults: {
-		text: "Hello World!"
+		text: str
 	},
 
 	getTemplate: function () {
@@ -16,5 +18,9 @@ Module.register("helloworld", {
 
 	getTemplateData: function () {
 		return this.config;
+	},
+
+	getHeader: function () {
+		return "Header";
 	}
 });
